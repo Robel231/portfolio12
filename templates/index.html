@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="binary-rain"></canvas>
+
+  <div id="lightning-container"></div> <--- Lightning Container
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Your Name</h1>
+      <h2>Web Developer / Designer</h2>
+      <p>A brief and engaging introduction about yourself.</p>
+      <a href="#projects" class="cta-button">View My Work</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-content">
+      <h2>About Me</h2>
+      <p>More detailed information about your background, skills, and interests.</p>
+      <ul>
+        <li><strong>Skills:</strong> HTML, CSS, JavaScript, Python, Flask, etc.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-content">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project 1">
+          <h3>Project Title 1</h3>
+          <p>Brief description of project 1.</p>
+          <a href="#" class="project-link">Learn More</a>
+        </div>
+
+        <div class="project-card">
+          <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Project 2">
+          <h3>Project Title 2</h3>
+          <p>Brief description of project 2.</p>
+          <a href="#" class="project-link">Learn More</a>
+        </div>
+
+        <div class="project-card">
+          <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Project 3">
+          <h3>Project Title 3</h3>
+          <p>Brief description of project 3.</p>
+          <a href="#" class="project-link">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-content">
+      <h2>Contact</h2>
+      <p>Your contact information (email, LinkedIn, GitHub, etc.).</p>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Your Name</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

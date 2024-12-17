@@ -1,0 +1,325 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #121212;
+    color: #eee;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Basic styling for sections */
+section {
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #00adb5;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #1e1e1e;
+    padding: 150px 0;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+/* Call to action button */
+.cta-button {
+    display: inline-block;
+    padding: 18px 35px;
+    background-color: #00adb5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-size: 1.3em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #008ba7;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-gap: 40px;
+    margin-top: 60px;
+}
+
+.project-card {
+    border: none;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #1e1e1e;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.05);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #00adb5;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #00798a;
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #282828;
+    color: #eee;
+    font-family: inherit;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #00adb5;
+}
+
+#contact textarea {
+    height: 180px;
+    resize: vertical;
+}
+
+#contact button {
+    background-color: #00adb5;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact button:hover {
+    background-color: #008ba7;
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Fade-in animation */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00adb5;
+    background-color: rgba(0, 173, 181, 0.1);
+}
+
+/* Lightning Effect Styles */
+#lightning-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.lightning {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform-origin: center;
+    animation: strike 0.2s linear forwards;
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 0 0 5px white;
+}
+/* ... (Previous CSS) */
+
+/* Lightning Effect Styles */
+#lightning-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.lightning {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform-origin: center;
+    animation: strike 0.2s linear forwards;
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 0 0 5px white;
+}
+
+@keyframes strike {
+    0% {
+        opacity: 0;
+        transform: scaleY(0) scaleX(0.2);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1) scaleX(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleY(0) scaleX(0.2);
+    }
+}
+
+/* Binary Rain Styles */
+#binary-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind other content */
+    pointer-events: none;
+}
